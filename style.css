@@ -1,0 +1,346 @@
+*,*>*{
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+      min-height: 100vh;
+  }
+  .hide{
+    display: none;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+}
+.left_section{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url('images/bg-main-desktop.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.cards{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%,-50%);
+}
+#card-front{
+    position: relative;
+    transform: translateX(-100px);
+}
+.card_logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+#icon{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+#number-card{
+    position: absolute;
+    color: rgb(236, 236, 236);
+    bottom: 5rem;
+    left: 1rem;
+    letter-spacing: 2px;
+}
+.card_info{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: rgb(236, 236, 236);
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+}
+.back_card{
+    position: relative;
+}
+#cvc-card{
+    position: absolute;
+    top: 74.3%;
+    right: 13%;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+}
+.right_section{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 200px;
+    width: 100%;
+}
+.right_section p{
+    margin-top: 19px;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(48, 12, 82);
+}
+.form1{
+    font-size: 20px;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    min-height: 35px;
+    min-width: 400px;
+    border-radius: 10px;
+    border:solid rebeccapurple 0.15em;
+
+}
+.form1:focus{
+    border: solid rebeccapurple 0.15em;
+}
+.form2{
+    font-size: 20px;
+    padding-left:13px;
+    letter-spacing: 2px;
+    max-width: 55px;
+    min-height: 35px;
+    border-radius: 10px;
+    border:solid rebeccapurple 0.15em;
+    margin-right: 5px;
+}
+.form3{
+    font-size: 20px;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    max-width: 180px;
+    min-height: 35px;
+    border-radius: 10px;
+    border:solid rebeccapurple 0.15em;
+    display: flex;
+}
+#cvc{
+    display: flex;
+    justify-content: space-between;
+    min-width: 490px;
+}
+#botao{
+    background-color: rebeccapurple;
+    color: white;
+    min-height: 40px;
+    min-width: 100px;
+    border-radius: 10px;
+    border: none;
+    margin-top:19px;
+    margin-left: 145px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#botao:hover{
+    
+    background-color: white;
+    color: rgb(73, 11, 73);
+    border: 0.2em solid rgb(73, 11, 73);
+    transition: 0.2 s;
+}
+#botao:active{
+    font-size: 15px;
+    background-color: rebeccapurple;
+    transition: 0.2s;
+    border: 0.2em solid rebeccapurple;
+    color: white;
+}
+#complet{
+    width: 150px;
+    margin-left: 20px;
+}
+#thanks H3{
+    letter-spacing: 3px ;
+    font-size: 30px;
+}
+#thanks p{
+    margin-left: -40px;
+    font-size: 19px;
+    color: rgb(146, 146, 146);
+}
+#thanks button{
+    height: 55px;
+    width: 420px;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: -85px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#thanks button:hover{
+    
+    transition: 0.3s;
+    background-color: white;
+    color: rgb(73, 11, 73);
+    border: 0.2em solid rgb(73, 11, 73);
+}
+#thanks button:active{
+    font-size: 20px;
+    background-color: rebeccapurple;
+    color: white;
+    transition: 0.2s;
+    border: 0.2em solid rebeccapurple;
+    
+}
+@media screen and (max-width:1365px){
+    .right_section{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-right: 0px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:1023px) {
+    #complet{
+        margin-top: 80px;
+        margin-left: 100px;
+    }
+    #thanks H3{
+        margin-left: 65px;
+    }
+    #thanks p{
+        margin-left: 10px;
+    }
+    #thanks button{
+        margin-left: -35px;
+    }
+    .img-resp{
+        width: 300px;
+    }
+    #icon{
+        width: 50px !important;
+    }
+    #number-card{
+        font-size: 1.1rem;
+    }
+    #cvc{
+        top: 42%;
+        right: 12%;
+    }
+    .card_info{
+        font-size: 17px;
+    }
+
+}
+@media screen and (max-width:767px) {
+    .container{
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .front_card .card_container img,.front_card,.back_card img,.back_card{
+        width: 280px;
+    }
+   
+    .left_section{
+        width: 120%;
+        min-height: 30vh;
+        background-image: url('images/bg-main-mobile.png');
+    }
+    .cards{
+        flex-direction: column-reverse;
+        left: 61%;
+        top: 60%;
+        gap: 0;
+    }
+    #card-back{
+        margin-top: 80px;
+    }
+    .back_card{
+        transform: translateY(70px);
+    }
+    .front_card{
+        z-index: 100;
+    }
+    .right_section{
+        margin-top: 6rem;
+    }
+    .right_section{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-right: -110px;
+        width: 90%;
+    }
+    .form1{
+        min-width: 300px;
+    }
+    .form2{
+        max-width: 50px;
+    }
+    .form3{
+        max-width: 100px;
+    }
+    #cvc{
+        display: flex;
+        justify-content: space-between;
+        min-width: 40px;
+        margin-right: -85px;
+    }
+    .right_section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+        width: 100%;
+    }
+    #cvc-card{
+        position: absolute;
+        top: 36.5%;
+        right: 14%;
+        font-weight: bold;
+        color: rgb(236, 236, 236);
+    }
+}
+@media screen and (max-width:480px){
+    #complet{
+        width: 100px;
+    }
+    #thanks H3{
+        margin-left: 55px;
+        font-size: 26px;
+    }
+    #thanks p{
+        margin-left: -10px;
+    }
+    #thanks button{
+        width: 300px;
+        margin-left: 5px;
+    }
+    .img-resp{
+        width: 240px;
+    }
+    #number-card{
+        font-size: 14px;
+        bottom: 3rem;
+        left: 1rem;
+    }
+    #name-card{
+        font-size: 14px;
+    }
+    #semideia{
+        font-size: 14px;
+    }
+    .card_info{
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+    #cvc-card{
+       font-size: 13px;
+        top: 39.1%;
+        right: 14%;
+        font-weight: bold;
+        
+    }
+}
