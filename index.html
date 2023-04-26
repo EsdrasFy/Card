@@ -44,15 +44,16 @@
             </div>
   <div class="right_section" >
     <form>
-      <div id="form">
-          <p >CARDHOLDER NAME <br> <br> <input type="text" class="form1" id="name" placeholder=" ex: Jane Appleseed" maxlength="32" minlength="16"  </input></p>
-          <p>CARD NUMBER <br> <br><input type="text" class="form1" id="number" placeholder=" ex: 0000 0000 0000 0000" maxlength="18"></input></p>
+      <div id="form" >
+          <p>CARDHOLDER NAME <br> <br> <input type="text" class="form1" id="name" placeholder=" ex: Jane Appleseed" maxlength="32" minlength="16"></input></p>
+          <p>CARD NUMBER <br> <br><input type="text" class="form1 " id="number" placeholder=" ex: 0000 0000 0000 0000" maxlength="19"></input>
+          </p><span id="erroNumber"></span>
           <aside id="cvc">
           <div>
-            <p> EXP. DATE  <br> <br><input type="text" class="form2" id="month" placeholder="00" maxlength="2"></input> <input type="text" class="form2" id="year" placeholder="00" maxlength="2"></input></p>
+            <p> EXP. DATE  <br> <br><input type="text" class="form2" id="month"  placeholder="00" maxlength="2"></input> <input type="text" class="form2" id="year" placeholder="00" maxlength="2"></input></p> <span id="erroExp"></span>
           </div>
           <div>
-            <p >CVC <br> <br><input type="text" class="form3" id="cvc-realy" placeholder="000" maxlength="3"></input></p>
+            <p>CVC <br> <br><input type="text" class="form3" id="cvc-realy" placeholder="000" maxlength="3"></input></p><span id="erroCvc"></span>
           </div>
           <br>
           </aside>

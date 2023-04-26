@@ -115,7 +115,7 @@
     font-size: 20px;
     padding-left: 10px;
     letter-spacing: 2px;
-    max-width: 180px;
+    max-width: 182.7px;
     min-height: 35px;
     border-radius: 10px;
     border:solid rebeccapurple 0.15em;
@@ -190,6 +190,15 @@
     color: white;
     transition: 0.2s;
     border: 0.2em solid rebeccapurple;
+    
+}
+.erro1:focus, .erro2, .erro3, .erro4, .erro5{
+    border: solid rgb(172, 8, 8) 2px !important;
+    outline: none;
+} 
+#erroExp, #erroNumber, #erroCvc{
+    font-size: 13px;
+    color: rgb(172, 8, 8);
     
 }
 @media screen and (max-width:1365px){
@@ -300,6 +309,9 @@
         right: 14%;
         font-weight: bold;
         color: rgb(236, 236, 236);
+    }
+    #botao{
+        margin: 10px 0px 0px 100px;
     }
 }
 @media screen and (max-width:480px){

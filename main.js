@@ -19,11 +19,19 @@ const submit = document.querySelector("#botao");
 const continar = document.querySelector("#continue");
 const form = document.querySelector("#form");
 const thanks = document.querySelector("#thanks")
+ 
+//error
+const erroExp = document.querySelector("#erroExp");
+const erroNumber = document.querySelector("#erroNumber");
+const erroCvc = document.querySelector("#erroCvc");
+
 
 
 //funçoes
-
+    
+2
 function setAll(){
+    
     setName();
     setNumber();
     setMonth();
@@ -39,6 +47,7 @@ function setName() {
 }
 function setNumber(){
     numberCard.textContent = number.value;
+   
 }
 function setMonth(){
     monthCard.textContent = month.value;
@@ -51,59 +60,109 @@ function setCVC(){
 }
 function verificarCampos(){
     if(namee.value === ""){
-       preventDefaultI()
+       preventDefaultI();
     }
-    
+    if(!validateNumber(number.value, 16)){
+        erroNumber.innerText = "Insira um Valor Válido (min. 16 Caracteres)!";
+    }
     if(number.value === ""){
-       preventDefaultI()
+       preventDefaultI();
     }
     if(number.value.length < 16){
-        preventDefaultI()
+        
+        number.classList.toggle("erro2");
+        preventDefaultI();
+    }
+    
+    if(!validateNumber(number.value, 16)){
+        erroNumber.innerText = "Insira um Valor Válido (min. 16 Caracteres)!";
+        preventDefault();
+    }
+    else{
+        erroNumber.textContent = "";
+
     }
     if(month.value === ""){
-       preventDefaultI()
+       preventDefaultI();
     }
     if(month.value.length < 2){
-        preventDefaultI()
+        
+        preventDefaultI();
     }
-    if(month.value > 12 ){
-        preventDefaultI()
+
+    if(month.value >= 13){
+        erroExp.innerText = "Insira uma Data Válida!";
+        month.classList.toggle("erro3");
+        preventDefaultI();
+    }else{
+        erroExp.innerText = "";
+        month.classList.remove("erro3");
     }
     if(year.value === ""){
-       preventDefaultI()
+       preventDefaultI();
     }
     if(year.value.length < 2){
-        preventDefaultI()
+        preventDefaultI();
     }
-    if(year.value > 30){
-        preventDefaultI()
-    }
+    
+    if(year.value >= 32 || year.value <= 22){
+        erroExp.innerText = "Insira uma Data Válida!";
+        year.classList.toggle("erro4");
+        preventDefaultI();
+        
+    }else{
+            erroExp.innerText = "";
+            year.classList.remove("erro4");
+        }
     if(cvc.value === ""){
-       preventDefaultI()
+       preventDefaultI();
     }
     if(cvc.value.length < 3){
-        preventDefaultI()
+        
+        erroCvc.innerText = "Insira um CVC correto!";
+        cvc.classList.toggle("erro5");
+        preventDefaultI();
+
+    }else{
+        erroCvc.innerText = "";
+        cvc.classList.remove("erro5");
     }
 }
-
+function validateNumber (numberr, minValue){
+    if(numberr.length >= minValue){
+        return true;
+    }
+    return false;
+}
+function clearInputs(){
+        namee.value = "";
+        number.value = "";
+        month.value = "";
+        year.value = "";
+        cvc.value = "";
+}
 //eventos
 submit.addEventListener("click", (e) => {
     e.preventDefault();
     verificarCampos();
     setAll();
     toggleHide();
+
+    
     
 });
 continar.addEventListener("click", (e) =>{
     e.preventDefault();
 
-    namee.value = "Jane Appleseed";
-    number.value = "0000 0000 0000 0000";
-    month.value = "00";
-    year.value = "00";
-    cvc.value = "000";
-
+    //document.getElementById("name").placeholder="oi";
+    
     setAll();
+        nameCard.textContent = "Jane Appleseed";
+        numberCard.textContent = "0000 0000 0000 0000";
+        monthCard.textContent = "00";
+        yearCard.textContent = "00";
+        cvcCard.textContent = "000";
+    clearInputs()    
     toggleHide();
 });
 
